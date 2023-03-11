@@ -133,3 +133,7 @@ class CarModel(models.Model):
 
 class Employee(models.Model):
     name = models.CharField(max_length=100)
+    salary = models.IntegerField()
+
+    class Meta:
+        db_table = "emp"
