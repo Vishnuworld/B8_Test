@@ -360,3 +360,11 @@ from django.contrib.auth.models import User
 
 # studs = Student.objects.using(SECOND_DATABASE).all()
 # print(studs)
+
+
+# First Way
+from django.db import connection
+cursor = connection.cursor()
+# cursor.execute('''SELECT * FROM student where id>8''') # raw sql
+data = cursor.fetchmany(3)
+print(data)
