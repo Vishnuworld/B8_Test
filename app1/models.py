@@ -129,3 +129,7 @@ class CarModel(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Employee(models.Model):
+    name = models.CharField(max_length=100)
