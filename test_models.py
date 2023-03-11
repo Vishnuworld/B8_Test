@@ -8,6 +8,14 @@
 from django.db import models
 
 
+class Product(models.Model):
+    name = models.CharField(unique=True, max_length=150)
+    price = models.IntegerField()
+    
+    class Meta:
+        managed = False
+        db_table = "product"
+
 class AuthGroup(models.Model):
     name = models.CharField(unique=True, max_length=150)
 
