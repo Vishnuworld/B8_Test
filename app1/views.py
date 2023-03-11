@@ -22,6 +22,7 @@ def welcome(request):  # http request
     print(request.user)
     return render(request, "home.html")
 
-
+def landing_page(request):
+    return HttpResponse("on landing page")
 
 # query params - Query Parameter
