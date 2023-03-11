@@ -2,7 +2,6 @@ from django.shortcuts import render, HttpResponse
 # Create your views here.
 
 # atomic transaction
-
 # View
 # - Class based view
 # - Function based view
@@ -20,7 +19,9 @@ from .models import Student
     # return HttpResponse(f"Welcome to the Django Application...!!{final_studs}")
 
 def welcome(request):  # http request
+    print(request.user)
     return render(request, "home.html")
 
 
-# query params - Query Parameters
+
+# query params - Query Parameter
