@@ -18,10 +18,20 @@ from .models import Student
     # final_studs = list(map(lambda x: x["name"], studs))
     # return HttpResponse(f"Welcome to the Django Application...!!{final_studs}")
 
-def welcome(request):  # http request
+def welcome1(request):  # http request
     print(request.user, request.method)
     print(request.__dict__)
     return render(request, "home.html")
+
+
+def welcome(request):  # http request
+    return render(request, "home.html")
+
+def welcome2(request):  # http request
+    print(request.user, request.method)
+    print(request.__dict__)
+    return render(request, "home.html")
+
 
 def landing_page(request):
     return HttpResponse("on landing page")
