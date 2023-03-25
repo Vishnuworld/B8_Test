@@ -19,7 +19,6 @@ from .models import Student
     # return HttpResponse(f"Welcome to the Django Application...!!{final_studs}")
 
 def welcome1(request):  # http request
-    print(request.user, request.method, request.GET)
     return render(request, "home.html")
 
 
