@@ -19,17 +19,13 @@ from .models import Student
     # return HttpResponse(f"Welcome to the Django Application...!!{final_studs}")
 
 def welcome1(request):  # http request
-    print(request.user, request.method)
-    print(request.__dict__)
     return render(request, "home.html")
 
 
 def welcome(request):  # http request
     return render(request, "home.html")
 
-def welcome2(request):  # http request
-    print(request.user, request.method)
-    print(request.__dict__)
+def welcome_mosami(request):  # http request
     return render(request, "home.html")
 
 
