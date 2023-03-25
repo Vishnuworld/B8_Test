@@ -25,9 +25,10 @@ def welcome1(request):  # http request
 def welcome(request):  # http request
     return render(request, "home.html")
 
-def welcome_mosami(request):  # http request
+def welcome2(request):  # http request
+    print(request.user, request.method)
+    print("All Data", request.__dict__)
     return render(request, "home.html")
-
 
 def landing_page(request):
     return HttpResponse("on landing page")
