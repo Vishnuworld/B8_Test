@@ -1,2 +1,3 @@
 def func(a, b):
-    return a + b
+    print(a+b)
+    return f"addition is {a + b}"
