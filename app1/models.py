@@ -124,8 +124,12 @@ class FuelType(models.Model):
         return self.name
     
 class CarModel(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=300)
     fueltype = models.ManyToManyField(FuelType, related_name='carmodels')
 
     def __str__(self):
         return self.name
+
+class ElectronicProducts(models.Model):
+    name = models.CharField(max_length=100)
+    price = models.FloatField()
