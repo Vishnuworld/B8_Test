@@ -19,8 +19,7 @@ from .models import Student
     # return HttpResponse(f"Welcome to the Django Application...!!{final_studs}")
 
 def welcome1(request):  # http request
-    print("Request Dict:- ", request.__dict__)
-    print("in welcome1")
+    print(request.user, request.method, request.GET)
     return render(request, "home.html")
 
 
@@ -31,7 +30,6 @@ def welcome2(request):  # http request
     print(request.__dict__)
     print("in welcome2")
     return render(request, "home.html")
-
 
 def landing_page(request):
     return HttpResponse("on landing page")
