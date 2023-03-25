@@ -19,8 +19,8 @@ from .models import Student
     # return HttpResponse(f"Welcome to the Django Application...!!{final_studs}")
 
 def welcome1(request):  # http request
-    print(request.user, request.method)
-    print(request.__dict__)
+    print("Request Dict:- ", request.__dict__)
+    print("in welcome1")
     return render(request, "home.html")
 
 
@@ -28,8 +28,8 @@ def welcome(request):  # http request
     return render(request, "home.html")
 
 def welcome2(request):  # http request
-    print(request.user, request.method)
     print(request.__dict__)
+    print("in welcome2")
     return render(request, "home.html")
 
 
